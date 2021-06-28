@@ -4,20 +4,21 @@ this is very intuitive sort.
 ->Sort in increasing order
 */
 
-let selectionSort = (arr) => {
-  let len = arr.length;
-  for (let i = 0; i < len; i++) {
-      let min = i;
-      for (let j = i + 1; j < len; j++) {
-          if (arr[min] > arr[j]) {
-              min = j;
-          }
-      }
-      if (min !== i) {
-          let tmp = arr[i];
-          arr[i] = arr[min];
-          arr[min] = tmp;
-      }
+let SelectionSort= arr=>{
+  
+    let n = arr.length;
+
+    for(let i=0;i<n-1;i++){
+
+      for(let j=i ;j<n;j++){ 
+           
+        // swapping
+        if(arr[i]>arr[j]){
+          let temp = arr[i];
+           arr[i] =arr[j];
+           arr[j]=temp;     
+        }  
+      }   
+    }
+    return arr;
   }
-  return arr;
-}

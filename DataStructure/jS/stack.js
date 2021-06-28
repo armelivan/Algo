@@ -1,5 +1,6 @@
 
 // stack implementation with an array
+// stack with a beginning finite dimension 
 let stack = class{
 
   constructor(dim){
@@ -7,7 +8,6 @@ let stack = class{
     this.arr = new Array(dim);
   }
 
-  
   empty(){
     return this.top==0;
   }

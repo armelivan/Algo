@@ -9,7 +9,7 @@ let insertionSort = arr=>{
 
   let n = arr.length;
 
-  for(let i = 1;i<n-1;i++){
+  for(let i = 1;i<n;i++){
       
       //The element to be shiffted 
       let value = arr[i];
@@ -22,7 +22,7 @@ let insertionSort = arr=>{
       }
       arr[hole]= value;
   }
-
+  return arr;
 }
 
 
